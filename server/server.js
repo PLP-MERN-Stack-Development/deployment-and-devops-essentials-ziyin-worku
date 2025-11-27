@@ -19,7 +19,7 @@ const allowedOrigins = (process.env.ALLOWED_ORIGINS || process.env.ALLOWED_ORIGI
   .map(origin => origin.trim())
   .filter(Boolean);
 
-const defaultOrigins = ["http://localhost:5173", "http://127.0.0.1:5173"];
+const defaultOrigins = ["http://localhost:5173", "http://127.0.0.1:5173", process.env.FRONTEND_URL];
 
 const corsOrigins = allowedOrigins.length > 0 ? allowedOrigins : defaultOrigins;
 
